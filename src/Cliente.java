@@ -1,20 +1,24 @@
-public class Cliente {
-    private String dni, nombre, direccion;
+import java.util.HashSet;
+import java.util.Set;
 
-    public Cliente() {
-    }
+public class Cliente {
+    private String dni;
+    private String nombre;
+    private String direccion;
+    private Set<Cuenta> cuentas;
 
     public Cliente(String dni, String nombre, String direccion) {
         this.dni = dni;
         this.nombre = nombre;
         this.direccion = direccion;
+        cuentas = new HashSet<>();
     }
 
     public String getDni() {
         return dni;
     }
 
-    public void setDni() {
+    public void setDni(String dni) {
         this.dni = dni;
     }
 
@@ -22,7 +26,7 @@ public class Cliente {
         return nombre;
     }
 
-    public void setNombre() {
+    public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
@@ -30,7 +34,15 @@ public class Cliente {
         return direccion;
     }
 
-    public void setDireccion() {
+    public void setDireccion(String direccion) {
         this.direccion = direccion;
+    }
+
+    public Set<Cuenta> getCuentas() {
+        return cuentas;
+    }
+
+    public void setCuentas(HashSet<Cuenta> cuentas) {
+        this.cuentas = cuentas;
     }
 }
