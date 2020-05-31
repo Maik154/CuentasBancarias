@@ -45,4 +45,8 @@ public class Cliente {
     public void setCuentas(HashSet<Cuenta> cuentas) {
         this.cuentas = cuentas;
     }
+
+    public void addCuenta(Cuenta cuenta){
+        this.cuentas.add(cuenta);
+    }
 }

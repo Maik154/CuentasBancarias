@@ -4,12 +4,12 @@ import java.util.Set;
 public abstract class Cuenta {
     private String numero;
     private String sucursal;
-    private Set<Cliente> clientes;
+    private Set<Cliente> clientesCuenta;
 
     public Cuenta(String numero, String sucursal) {
         this.numero = numero;
         this.sucursal = sucursal;
-        clientes = new HashSet<>();
+        clientesCuenta = new HashSet<>();
     }
 
     public String getNumero() {
@@ -28,15 +28,15 @@ public abstract class Cuenta {
         this.sucursal = sucursal;
     }
 
-    public Set<Cliente> getClientes() {
-        return clientes;
+    public Set<Cliente> getClientesCuenta() {
+        return clientesCuenta;
     }
 
-    public void setClientes(Set<Cliente> clientes) {
-        this.clientes = clientes;
+    public void setClientesCuenta(Set<Cliente> clientesCuenta) {
+        this.clientesCuenta = clientesCuenta;
     }
 
-    public void addCliente(Cliente cliente){
-        clientes.add(cliente);
+    public void addCliente(Cliente cliente) {
+        clientesCuenta.add(cliente);
     }
 }
